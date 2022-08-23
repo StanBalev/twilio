@@ -1,0 +1,7 @@
+<isdecorate template="common/layout/page">
+<isset name="sessionVar" value="${session.custom.sessionVar ? session.custom.sessionVar : 0}" scope = "session"/>
+       <isif condition="${session.custom.sessionVar >= 0}">
+           ${session.custom.sessionVar += 1}
+       </isif>
+        
+</isdecorate>

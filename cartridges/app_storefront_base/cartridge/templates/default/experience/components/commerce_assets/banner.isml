@@ -1,0 +1,17 @@
+<isscript>
+    var videoID = pdict.videoID;
+    var embededPath = "https://www.youtube.com/embed/";
+    var fullPath = embededPath+videoID;
+</isscript>
+ <script>
+ 
+ </script>
+<div class="campaign-banner d-none">
+    <div class="container">
+        <div class="campaign-banner-container d-flex justify-content-between">
+
+<iframe width="560" height="315" src="${fullPath}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        </div>
+    </div>
+</div>

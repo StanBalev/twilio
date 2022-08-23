@@ -1,0 +1,8 @@
+{
+    "paths": {
+        "base":"./cartridges/app_storefront_base/"
+    },
+    
+    "packageName": "app_custom_cartridge"
+    
+}

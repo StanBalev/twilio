@@ -1,0 +1,13 @@
+<isif condition="${slotcontent != null}">
+    <isloop items="${slotcontent.content}" var="contentAsset">
+    <h1>testo</h1>
+        <isscript>
+            var content = contentAsset.custom.body;
+            if (session.customer.profile && session.customer.profile.firstName){
+                content = content.toString().replace('{name}', session.customer.profile.firstName );
+            } 
+         </isscript>
+        <isprint value="${content}" encoding="off"/>
+    </isloop>
+    
+</isif>

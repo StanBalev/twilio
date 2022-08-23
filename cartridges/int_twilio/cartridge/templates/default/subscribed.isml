@@ -1,0 +1,7 @@
+<isdecorate template="common/layout/page">
+    <div class="container text-center">
+        <h1>Thank you!</h1>
+        <h2>You will be notified when this product is back in stock</h2>
+        <a href="${URLUtils.url('Home-Show')}"> Go shopping</a>
+    </div>
+</isdecorate>

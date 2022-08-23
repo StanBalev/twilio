@@ -1,0 +1,22 @@
+{
+    "name": "YouTube",
+    "description": "A YouTube banner.",
+    "group": "commerce_assets",
+    "attribute_definition_groups": [
+      {
+       "id":"video",
+       "name":"Video Banner Configuration",
+       "description":"Define your video ID for the banner.",
+       "attribute_definitions":[
+        {
+          "id": "videoID",
+          "name": "Video ID",
+          "description": "The video shown by the banner.",
+          "type": "string",
+          "required": true
+        }
+        ]
+      }
+    ],
+    "region_definitions": []
+   }

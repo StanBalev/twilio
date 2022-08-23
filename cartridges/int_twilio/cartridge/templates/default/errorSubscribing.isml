@@ -1,0 +1,9 @@
+<isdecorate template="common/layout/page">
+    <div class="container text-center">
+        <h1>There are an error!</h1>
+        <h2>Please go back and try again</h2>
+        <a class='alert-danger' href="${URLUtils.url('Product-Show', 'pid', pdict.pid)}"> Go back</a>
+        <p></p>
+        <a href="${URLUtils.url('Home-Show')}"> Go shopping</a>
+    </div>
+</isdecorate>

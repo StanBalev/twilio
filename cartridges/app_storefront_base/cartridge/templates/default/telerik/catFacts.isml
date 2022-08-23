@@ -1,0 +1,3 @@
+<div id="test">
+    <p><isprint value="${pdict.response}" encoding="on" /></p>
+</div>

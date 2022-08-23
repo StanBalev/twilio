@@ -1,0 +1,32 @@
+<isdecorate template="${pdict.format == 'ajax' ? 'common/layout/blank' : 'common/layout/page'}">
+    <isset name="resultsCount" value="${pdict.searchResults.count}" scope="page"/>
+    <isset name="query" value="${pdict.query}" scope="page"/>
+    <isset name="format" value="${pdict.format}" scope="page"/>
+    <isif condition="${resultsCount > 0}">
+    <div class="container">
+    
+    <isloop items="${pdict.searchResults.productSearchHits}" var="productHit" status="counter">
+    <isif condition="${counter.count % 3 == 1}">
+        <div class="row justify-content-center">
+    </isif>
+    
+        <div class="col-md-4 text-center" >
+            <isset name="product" value="${productHit.getProduct()}" scope="page" />
+            <a href="${URLUtils.url("Product-Show", "pid", product.ID)}">
+                <h2>${product.name}</h2>
+                <img src="${product.getImage('small').httpURL}" alt="${product.getImage('small').alt}"/>
+            </a>
+        </div>
+
+        <isif condition="${counter.count % 3 == 0}">
+        </div>
+        <hr/>
+        </isif>
+    </isloop>
+
+    </div>
+        <h3>Results count for  ${pdict.query} <isprint value="${resultsCount}" encoding="on" style="INTEGER" /> </h3>
+    <iselse/>
+        <h3>No results for: ${pdict.query}  </h3>
+    </isif>
+</isdecorate>

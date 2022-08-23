@@ -1,0 +1,14 @@
+{
+    "name":"Custom Homepage",
+    "description":"my custom storefront homepage.",
+    "region_definitions":[
+
+       {
+         "id":"main",
+         "name":"Main",
+         "component_type_exclusions":[
+             {"type_id":"banner"}
+         ]
+       }
+    ]
+}

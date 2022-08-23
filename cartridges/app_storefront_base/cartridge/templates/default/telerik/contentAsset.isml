@@ -1,0 +1,9 @@
+<isdecorate template="common/layout/page">
+    <iscomment>
+      check if the content is empty and is it the asset online?
+    </iscomment>
+    <isprint value="${dw.util.StringUtils.format(pdict.content.custom.body.markup, 'Stani')}" encoding="off"/> 
+    <isif condition="${!empty(pdict.content) && pdict.content.online}">  
+        <isprint value="${pdict.content.custom.body}" encoding="off"/>   
+    </isif>
+</isdecorate>

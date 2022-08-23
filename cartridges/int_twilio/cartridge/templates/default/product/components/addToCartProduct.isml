@@ -1,0 +1,41 @@
+<div class="row cart-and-ipay">
+    <div class="col-sm-12">
+
+    <input type="hidden" class="add-to-cart-url" value="${pdict.addToCartUrl}">
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+    </isscript>
+        <isslot id="backInStock" description="" context="global" />
+        <isif condition="${!pdict.product.isInStock}">
+            <form action="${URLUtils.url('Product-Twilio')}" class="backInStock" method="POST" name="login-form">
+                <div class="form-group required">
+                    <label class="form-control-label" for="phone">
+                        Your phone number:
+                    </label>
+                    <input type="text" id="phone" required aria-required="true" class="form-control required"
+                        aria-describedby="form-email-error" name="phone" value="">
+                    <div class="invalid-feedback" id="form-phone-error"></div>
+                </div>
+                <div class="form-group required">
+                    <input type="hidden" id="pid" required aria-required="true" class="form-control required"
+                        aria-describedby="form-pid-error" name="pid" value="${product.id}">
+                    <div class="invalid-feedback" id="form-pid-error"></div>
+                </div>
+
+
+                <button type="submit" class="btn btn-block btn-primary backInStockBtn"><i
+                        class="fa fa-shopping-bag"></i>
+                    ${Resource.msg('label.backinstock', 'common', null)} </button>
+            </form>
+        </isif>
+
+        <button class="add-to-cart btn btn-primary" data-toggle="modal" data-target="#chooseBonusProductModal"
+            data-pid="${product.id}" ${!product.readyToOrder || !product.available ? "" : ""}>
+            <i class="fa fa-shopping-bag"></i>
+            ${Resource.msg('button.addtocart', 'common', null)}
+        </button>
+
+        <isinclude template="product/components/addToCartButtonExtension" />
+
+    </div>
+</div>

@@ -1,0 +1,13 @@
+{
+    "step-types":
+        {
+            "script-module-step":
+            [
+            {
+                "@type-id":"custom.notifyWhenInStock",
+                "description":"This  job will triger the service which will sned notifications",
+                "module":"int_twilio/cartridge/scripts/steps/backInStockJobStep"          
+            }
+            ]
+        }
+    }

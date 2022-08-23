@@ -1,0 +1,3 @@
+
+<isprint value="${new Date().toLocaleString()}"/>
+Include Templae

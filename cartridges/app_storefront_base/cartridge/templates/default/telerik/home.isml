@@ -1,0 +1,17 @@
+<isdecorate template="common/layout/page">
+<p>hello <isprint value="${pdict.welcomeMSG}"> </p>
+<isscript>
+    var arr = ['one','two','three'];
+</isscript>
+<isloop items="${arr}" var="subItem" status="index">
+    <isif condition="${index.first}">
+        <strong><p>${subItem}</p></strong>   
+     <iselse/>
+        <p>${subItem}</p>
+    </isif>
+</isloop>
+${pdict.welcomeMSG}
+<isset name="changeScope" value="1" scope="pdict"/>
+<isprint value="${new Date().toLocaleString()}"/>
+<isinclude url="${URLUtils.url('Telerik-Include')}"/>
+</isdecorate>
